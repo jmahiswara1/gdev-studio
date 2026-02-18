@@ -1,0 +1,220 @@
+{
+    "nav": {
+        "home": "Beranda",
+        "services": "Layanan",
+        "projects": "Proyek",
+        "pricing": "Harga",
+        "about": "Tentang",
+        "contact": "Kontak"
+    },
+    "hero": {
+        "badge": "Jasa Koding Profesional",
+        "title": "Kami Membangun Produk Digital yang Berdampak",
+        "subtitle": "Dari landing page hingga aplikasi full-stack. Kode bersih, desain modern, tepat waktu.",
+        "cta_primary": "Lihat Proyek",
+        "cta_secondary": "Hubungi Kami",
+        "stats": {
+            "projects": "Proyek Selesai",
+            "clients": "Klien Puas",
+            "tech": "Teknologi",
+            "experience": "Tahun Pengalaman"
+        },
+        "terminal_lines": [
+            "npx create-next-app@latest gdev-studio",
+            "Menginstall dependensi...",
+            "Menyiapkan TypeScript, Tailwind CSS, GSAP...",
+            "Membangun website impianmu...",
+            "Siap di-deploy!"
+        ]
+    },
+    "services": {
+        "badge": "Layanan Kami",
+        "title": "Layanan yang Kami Tawarkan",
+        "subtitle": "Dari landing page sederhana hingga aplikasi full-stack kompleks, kami menghadirkan kode berkualitas dengan desain premium.",
+        "cta": "Pesan via WhatsApp",
+        "view_all": "Lihat Semua Layanan",
+        "duration": "Estimasi",
+        "from": "Mulai"
+    },
+    "whyus": {
+        "badge": "Mengapa Kami",
+        "title": "Mengapa Klien Mempercayai GDev Studio",
+        "pillars": [
+            {
+                "title": "Clean Code",
+                "desc": "Kode terstruktur, mudah di-maintain, dan terdokumentasi sesuai best practice industri."
+            },
+            {
+                "title": "Fokus UI/UX",
+                "desc": "Setiap piksel penting. Kami mendesain antarmuka yang indah, intuitif, dan dioptimalkan untuk konversi."
+            },
+            {
+                "title": "Teknologi Modern",
+                "desc": "Dibangun dengan teknologi terkini: Next.js, React, TypeScript, dan library animasi modern."
+            }
+        ]
+    },
+    "howitworks": {
+        "badge": "Proses Kami",
+        "title": "Bagaimana Kami Mewujudkan Ide Anda",
+        "steps": [
+            {
+                "title": "Define",
+                "desc": "Kami mendiskusikan tujuan, target audiens, dan kebutuhan proyek Anda secara detail."
+            },
+            {
+                "title": "Design",
+                "desc": "Membuat wireframe dan mockup UI yang selaras dengan identitas brand Anda."
+            },
+            {
+                "title": "Build",
+                "desc": "Pengembangan dengan arsitektur kode bersih, desain responsif, dan animasi halus."
+            },
+            {
+                "title": "Test",
+                "desc": "Pengujian menyeluruh di berbagai perangkat dan browser untuk memastikan semuanya sempurna."
+            },
+            {
+                "title": "Launch",
+                "desc": "Deployment ke production dengan setup domain, analytics, dan optimasi performa."
+            }
+        ]
+    },
+    "techstack": {
+        "badge": "Tech Stack",
+        "title": "Teknologi yang Kami Kuasai"
+    },
+    "projectsBento": {
+        "badge": "Proyek Pilihan",
+        "title": "Proyek yang Telah Kami Bangun",
+        "view_all": "Lihat Semua Proyek"
+    },
+    "pricing": {
+        "badge": "Harga",
+        "title": "Harga Transparan, Tanpa Biaya Tersembunyi",
+        "subtitle": "Pilih paket yang sesuai kebutuhan Anda. Semua paket sudah termasuk deployment dan support dasar.",
+        "view_all": "Lihat Harga Lengkap",
+        "per_project": "per proyek",
+        "most_popular": "Paling Populer",
+        "payment_flow": "Alur Pembayaran",
+        "compare": "Bandingkan Paket"
+    },
+    "testimonials": {
+        "badge": "Testimoni",
+        "title": "Apa Kata Klien Tentang Kami"
+    },
+    "faq": {
+        "badge": "FAQ",
+        "title": "Pertanyaan yang Sering Diajukan",
+        "items": [
+            {
+                "q": "Teknologi apa yang digunakan?",
+                "a": "Kami menggunakan Next.js, React, TypeScript, dan Tailwind CSS untuk frontend. Untuk backend, kami menggunakan Node.js, Express, NestJS, atau Laravel sesuai kebutuhan proyek. Opsi database meliputi PostgreSQL, MongoDB, dan Supabase."
+            },
+            {
+                "q": "Berapa lama waktu pengerjaan proyek?",
+                "a": "Tergantung kompleksitas proyek. Landing page biasanya 3-5 hari, sedangkan dashboard fullstack bisa 10-14 hari. Kami memberikan estimasi akurat setelah konsultasi awal."
+            },
+            {
+                "q": "Apakah ada revisi?",
+                "a": "Ya! Setiap paket mencakup jumlah revisi tertentu. Paket Professional 3 revisi, Business 5 revisi, dan Enterprise revisi tanpa batas."
+            },
+            {
+                "q": "Bagaimana proses pembayarannya?",
+                "a": "Kami memerlukan DP 50% di awal untuk memulai proyek. Sisa 50% dibayarkan setelah proyek selesai dan disetujui, sebelum deployment."
+            },
+            {
+                "q": "Apakah bisa bantu hosting dan domain?",
+                "a": "Tentu! Kami memandu proses pembelian domain dan setup hosting. Sebagian besar proyek kami di-deploy di Vercel atau Netlify untuk performa optimal."
+            },
+            {
+                "q": "Apakah source code diberikan?",
+                "a": "Ya, Anda menerima source code lengkap setelah proyek selesai dan pembayaran final. Kode terdokumentasi dan terstruktur untuk kemudahan maintenance."
+            },
+            {
+                "q": "Bisakah request perubahan setelah proyek selesai?",
+                "a": "Bisa! Kami menawarkan layanan maintenance dan update dengan tarif per jam atau per task. Kami juga menyediakan pelatihan untuk mengelola konten jika proyek Anda menggunakan CMS."
+            }
+        ]
+    },
+    "cta": {
+        "title": "Siap Membangun Sesuatu yang Luar Biasa?",
+        "subtitle": "Mari wujudkan ide Anda menjadi realitas digital yang memukau. Mulai percakapan hari ini.",
+        "primary": "Mulai Proyek",
+        "secondary": "Lihat Portfolio"
+    },
+    "footer": {
+        "tagline": "Jasa koding profesional oleh Gadang Jatu Mahiswara. Kode bersih, desain modern, tepat waktu.",
+        "quick_links": "Tautan Cepat",
+        "services": "Layanan",
+        "connect": "Terhubung",
+        "copyright": "GDev Studio. Hak cipta dilindungi."
+    },
+    "about": {
+        "badge": "Tentang Saya",
+        "title": "Gadang Jatu Mahiswara",
+        "role": "Fullstack Developer",
+        "bio": "Mahasiswa Teknik Informatika di Universitas Negeri Surabaya dengan fondasi kuat dalam pengembangan aplikasi web dan desain UI/UX. Terampil dalam mempelajari dan mengimplementasikan solusi full-stack end-to-end, dari membangun antarmuka pengguna yang responsif dan aksesibel hingga mengembangkan layanan back-end dengan RESTful API dan integrasi database.",
+        "education": "Pendidikan",
+        "experience": "Pengalaman",
+        "certifications": "Sertifikasi",
+        "skills": "Keahlian & Teknologi",
+        "values_title": "Nilai-Nilai Saya",
+        "values": [
+            {
+                "title": "Clean Code",
+                "desc": "Kode yang terstruktur, mudah dibaca, dan di-maintain adalah hal yang tidak bisa ditawar."
+            },
+            {
+                "title": "Tepat Waktu",
+                "desc": "Deadline adalah komitmen. Setiap proyek disampaikan sesuai janji."
+            },
+            {
+                "title": "Transparan",
+                "desc": "Komunikasi terbuka tentang progres, tantangan, dan solusi."
+            },
+            {
+                "title": "Konfidensial",
+                "desc": "Detail proyek dan source code Anda diperlakukan dengan kerahasiaan tertinggi."
+            }
+        ]
+    },
+    "contact": {
+        "badge": "Hubungi Kami",
+        "title": "Mari Bekerja Sama",
+        "subtitle": "Punya proyek yang ingin dibangun? Isi formulir dan kami akan menghubungi Anda via WhatsApp.",
+        "name": "Nama Lengkap",
+        "email": "Alamat Email",
+        "service": "Jenis Layanan",
+        "message": "Pesan Anda",
+        "submit": "Kirim via WhatsApp",
+        "select_service": "Pilih layanan..."
+    },
+    "project_detail": {
+        "challenge": "Tantangan",
+        "solution": "Solusi Kami",
+        "features": "Fitur Utama",
+        "gallery": "Galeri Proyek",
+        "tech_used": "Teknologi yang Digunakan",
+        "checkout_title": "Tertarik dengan Proyek Ini?",
+        "checkout_subtitle": "Pesan versi kustommu sekarang",
+        "checkout_name": "Nama Anda",
+        "checkout_needs": "Kebutuhan Singkat",
+        "checkout_budget": "Rentang Budget",
+        "checkout_cta": "Hubungi via WhatsApp",
+        "related": "Proyek Terkait",
+        "view_demo": "Lihat Demo",
+        "view_source": "Lihat Source"
+    },
+    "fab": {
+        "wa_label": "Chat WhatsApp",
+        "ai_label": "Asisten AI"
+    },
+    "chat": {
+        "title": "Asisten AI GDev",
+        "placeholder": "Tanyakan apa saja tentang layanan kami...",
+        "send": "Kirim",
+        "offline_title": "Mode Offline",
+        "offline_desc": "Asisten AI sedang tidak tersedia. Berikut beberapa pertanyaan umum:"
+    }
+}

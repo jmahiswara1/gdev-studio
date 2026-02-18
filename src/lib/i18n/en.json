@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Professional Coding Service",
+    "title": "We Build Digital Products That Drive Results",
+    "subtitle": "From landing pages to full-stack applications. Clean code, modern design, delivered on time.",
+    "cta_primary": "View Projects",
+    "cta_secondary": "Get in Touch",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "tech": "Technologies",
+      "experience": "Years Experience"
+    },
+    "terminal_lines": [
+      "npx create-next-app@latest gdev-studio",
+      "Installing dependencies...",
+      "Setting up TypeScript, Tailwind CSS, GSAP...",
+      "Building your dream website...",
+      "Ready to deploy!"
+    ]
+  },
+  "services": {
+    "badge": "What We Do",
+    "title": "Services We Offer",
+    "subtitle": "From simple landing pages to complex full-stack applications, we deliver quality code with premium design.",
+    "cta": "Order via WhatsApp",
+    "view_all": "View All Services",
+    "duration": "Estimated",
+    "from": "From"
+  },
+  "whyus": {
+    "badge": "Why Choose Us",
+    "title": "Why Clients Trust GDev Studio",
+    "pillars": [
+      {
+        "title": "Clean Code",
+        "desc": "Well-structured, maintainable, and documented code following industry best practices."
+      },
+      {
+        "title": "UI/UX Focus",
+        "desc": "Every pixel matters. We design interfaces that are beautiful, intuitive, and conversion-optimized."
+      },
+      {
+        "title": "Modern Tech",
+        "desc": "Built with the latest technologies: Next.js, React, TypeScript, and modern animation libraries."
+      }
+    ]
+  },
+  "howitworks": {
+    "badge": "Our Process",
+    "title": "How We Bring Your Ideas to Life",
+    "steps": [
+      { "title": "Define", "desc": "We discuss your goals, target audience, and project requirements in detail." },
+      { "title": "Design", "desc": "Creating wireframes and UI mockups that align with your brand identity." },
+      { "title": "Build", "desc": "Development with clean code architecture, responsive design, and smooth animations." },
+      { "title": "Test", "desc": "Thorough testing across devices and browsers to ensure everything works perfectly." },
+      { "title": "Launch", "desc": "Deployment to production with domain setup, analytics, and performance optimization." }
+    ]
+  },
+  "techstack": {
+    "badge": "Tech Stack",
+    "title": "Technologies We Master"
+  },
+  "projectsBento": {
+    "badge": "Selected Projects",
+    "title": "Projects We Have Built",
+    "view_all": "View All Projects"
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Transparent Pricing, No Hidden Fees",
+    "subtitle": "Choose a package that fits your needs. All packages include deployment and basic support.",
+    "view_all": "View Full Pricing",
+    "per_project": "per project",
+    "most_popular": "Most Popular",
+    "payment_flow": "Payment Flow",
+    "compare": "Compare Plans"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Clients Say About Us"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What technologies do you use?",
+        "a": "We primarily use Next.js, React, TypeScript, and Tailwind CSS for frontend. For backend, we use Node.js, Express, NestJS, or Laravel depending on project needs. Database options include PostgreSQL, MongoDB, and Supabase."
+      },
+      {
+        "q": "How long does it take to complete a project?",
+        "a": "Timeline depends on project complexity. A landing page typically takes 3-5 days, while a fullstack dashboard can take 10-14 days. We provide accurate estimates after initial consultation."
+      },
+      {
+        "q": "Do you offer revisions?",
+        "a": "Yes! Each package includes a specific number of revisions. The Professional plan includes 3 revisions, Business includes 5, and Enterprise offers unlimited revisions."
+      },
+      {
+        "q": "What is the payment process?",
+        "a": "We require 50% upfront (DP) to start the project. The remaining 50% is due upon project completion and your approval, before deployment."
+      },
+      {
+        "q": "Can you help with hosting and domain?",
+        "a": "Absolutely! We guide you through domain purchase and hosting setup. Most of our projects are deployed on Vercel or Netlify for optimal performance."
+      },
+      {
+        "q": "Do you provide source code?",
+        "a": "Yes, you receive the complete source code upon project completion and final payment. The code is well-documented and structured for easy maintenance."
+      },
+      {
+        "q": "Can I request changes after the project is done?",
+        "a": "Yes! We offer maintenance and update services at hourly or per-task rates. We also provide training on how to manage content if your project includes a CMS."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Build Something Amazing?",
+    "subtitle": "Let's turn your ideas into a stunning digital reality. Start a conversation today.",
+    "primary": "Start a Project",
+    "secondary": "View Portfolio"
+  },
+  "footer": {
+    "tagline": "Professional coding service by Gadang Jatu Mahiswara. Clean code, modern design, delivered on time.",
+    "quick_links": "Quick Links",
+    "services": "Services",
+    "connect": "Connect",
+    "copyright": "GDev Studio. All rights reserved."
+  },
+  "about": {
+    "badge": "About Me",
+    "title": "Gadang Jatu Mahiswara",
+    "role": "Fullstack Developer",
+    "bio": "Informatics Engineering undergraduate at Universitas Negeri Surabaya with a strong foundation in web application development and UI/UX design. Skilled in learning and implementing end-to-end full-stack solutions, from building responsive and accessible user interfaces to developing back-end services with RESTful APIs and database integration.",
+    "education": "Education",
+    "experience": "Experience",
+    "certifications": "Certifications",
+    "skills": "Skills & Technologies",
+    "values_title": "My Values",
+    "values": [
+      { "title": "Clean Code", "desc": "Well-structured, readable, and maintainable code is non-negotiable." },
+      { "title": "On Time", "desc": "Deadlines are commitments. Every project is delivered as promised." },
+      { "title": "Transparent", "desc": "Open communication about progress, challenges, and solutions." },
+      { "title": "Confidential", "desc": "Your project details and source code are treated with utmost confidentiality." }
+    ]
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind? Fill out the form and we'll get back to you via WhatsApp.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "service": "Service Type",
+    "message": "Your Message",
+    "submit": "Send via WhatsApp",
+    "select_service": "Select a service..."
+  },
+  "project_detail": {
+    "challenge": "The Challenge",
+    "solution": "Our Solution",
+    "features": "Key Features",
+    "gallery": "Project Gallery",
+    "tech_used": "Technologies Used",
+    "checkout_title": "Interested in This Project?",
+    "checkout_subtitle": "Order a customized version now",
+    "checkout_name": "Your Name",
+    "checkout_needs": "Brief Description of Needs",
+    "checkout_budget": "Budget Range",
+    "checkout_cta": "Contact via WhatsApp",
+    "related": "Related Projects",
+    "view_demo": "View Demo",
+    "view_source": "View Source"
+  },
+  "fab": {
+    "wa_label": "Chat WhatsApp",
+    "ai_label": "AI Assistant"
+  },
+  "chat": {
+    "title": "GDev AI Assistant",
+    "placeholder": "Ask me anything about our services...",
+    "send": "Send",
+    "offline_title": "Offline Mode",
+    "offline_desc": "AI assistant is currently unavailable. Here are some common questions:"
+  }
+}
