@@ -10,7 +10,8 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { AnimatedThemeToggle } from "@/components/ui/animated-theme-toggle";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
     { key: "home", href: "/" },
@@ -65,8 +66,8 @@ export function Navbar() {
             <nav
                 ref={navRef}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? "glass shadow-sm"
-                        : "bg-transparent"
+                    ? "glass shadow-sm"
+                    : "bg-transparent"
                     }`}
             >
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -92,8 +93,8 @@ export function Navbar() {
                                     key={item.key}
                                     href={item.href}
                                     className={`nav-item rounded-lg px-4 py-2 text-sm font-medium transition-colors ${pathname === item.href
-                                            ? "text-foreground bg-accent"
-                                            : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                                        ? "text-foreground bg-accent"
+                                        : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
                                         }`}
                                 >
                                     {t.nav[item.key as keyof typeof t.nav]}
@@ -104,26 +105,28 @@ export function Navbar() {
                         {/* Desktop actions right */}
                         <div className="hidden items-center gap-2 md:flex">
                             <LanguageToggle />
-                            <ThemeToggle />
+                            <AnimatedThemeToggle />
                         </div>
 
                         {/* Mobile menu button */}
-                        <button
+                        <Button
+                            variant="ghost"
+                            size="icon"
                             onClick={() => setIsMobileOpen(!isMobileOpen)}
-                            className="nav-item relative z-10 rounded-lg p-2 md:hidden hover:bg-accent"
+                            className="nav-item relative z-10 md:hidden"
                             aria-label="Toggle menu"
                         >
                             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
+                        </Button>
                     </div>
                 </div>
-
-                {/* Scroll progress bar */}
-                <div
-                    className="scroll-progress absolute bottom-0 left-0 h-[2px] bg-foreground"
-                    style={{ transform: `scaleX(${scrollProgress})` }}
-                />
             </nav>
+
+            {/* Scroll progress bar - Moved outside nav to ensure correct fixed positioning */}
+            <div
+                className="scroll-progress fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[100]"
+                style={{ transform: `scaleX(${scrollProgress})` }}
+            />
 
             {/* Mobile menu overlay */}
             <AnimatePresence>
@@ -147,8 +150,8 @@ export function Navbar() {
                                         href={item.href}
                                         onClick={() => setIsMobileOpen(false)}
                                         className={`text-2xl font-medium transition-colors ${pathname === item.href
-                                                ? "text-foreground"
-                                                : "text-muted-foreground"
+                                            ? "text-foreground"
+                                            : "text-muted-foreground"
                                             }`}
                                     >
                                         {t.nav[item.key as keyof typeof t.nav]}
@@ -157,7 +160,7 @@ export function Navbar() {
                             ))}
                             <div className="mt-8 flex items-center gap-4">
                                 <LanguageToggle />
-                                <ThemeToggle />
+                                <AnimatedThemeToggle />
                             </div>
                         </div>
                     </motion.div>

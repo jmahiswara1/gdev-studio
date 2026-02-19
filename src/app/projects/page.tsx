@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const categories: (ProjectCategory | "All")[] = [
     "All",
@@ -18,6 +19,8 @@ const categories: (ProjectCategory | "All")[] = [
     "AI",
 ];
 
+import { SectionReveal } from "@/components/ui/section-reveal";
+
 export default function ProjectsPage() {
     const { t } = useTranslation();
     const [activeCategory, setActiveCategory] = useState<ProjectCategory | "All">("All");
@@ -28,32 +31,37 @@ export default function ProjectsPage() {
 
     return (
         <div className="bg-background pt-24 pb-16 min-h-screen">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-                <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                    {t.projectsBento.title}
-                </h1>
-                <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-                    Explore our portfolio of high-quality web applications and digital products.
-                </p>
-            </div>
+            <SectionReveal>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+                    <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                        {t.projectsBento.title}
+                    </h1>
+                    <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+                        Explore our portfolio of high-quality web applications and digital products.
+                    </p>
+                </div>
+            </SectionReveal>
 
             {/* Filter Tabs */}
-            <div className="container mx-auto px-4 mb-16 overflow-x-auto pb-4">
-                <div className="flex justify-start sm:justify-center gap-2 min-w-max">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => setActiveCategory(category)}
-                            className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${activeCategory === category
-                                    ? "bg-foreground text-background shadow-md transform scale-105"
+            <SectionReveal delay={0.1}>
+                <div className="container mx-auto px-4 mb-16 overflow-x-auto pb-4">
+                    <div className="flex justify-start sm:justify-center gap-2 min-w-max">
+                        {categories.map((category) => (
+                            <Button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                variant="ghost"
+                                className={`rounded-full px-4 py-2 text-sm font-medium transition-all h-auto ${activeCategory === category
+                                    ? "bg-foreground text-background shadow-md transform scale-105 hover:bg-foreground/90 hover:text-background"
                                     : "bg-accent/50 text-muted-foreground hover:bg-accent hover:text-foreground"
-                                }`}
-                        >
-                            {category}
-                        </button>
-                    ))}
+                                    }`}
+                            >
+                                {category}
+                            </Button>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </SectionReveal>
 
             {/* Projects Grid */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,14 +70,14 @@ export default function ProjectsPage() {
                     className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
                 >
                     <AnimatePresence mode="popLayout">
-                        {filteredProjects.map((project) => (
+                        {filteredProjects.map((project, index) => (
                             <motion.div
                                 layout
-                                key={project.id}
+                                key={project.slug}
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
-                                transition={{ duration: 0.3 }}
+                                transition={{ duration: 0.3, delay: index * 0.1 }}
                                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:shadow-xl hover:-translate-y-1"
                             >
                                 {/* Thumbnail */}
@@ -126,12 +134,13 @@ export default function ProjectsPage() {
                 {filteredProjects.length === 0 && (
                     <div className="py-20 text-center">
                         <p className="text-muted-foreground">No projects found in this category.</p>
-                        <button
+                        <Button
+                            variant="link"
                             onClick={() => setActiveCategory("All")}
-                            className="mt-4 text-primary hover:underline font-medium"
+                            className="mt-4 text-primary hover:underline font-medium p-0 h-auto"
                         >
                             View all projects
-                        </button>
+                        </Button>
                     </div>
                 )}
             </div>

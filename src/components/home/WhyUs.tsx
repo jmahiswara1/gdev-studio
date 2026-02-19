@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslation } from "@/lib/i18n/useTranslation";
-import { Code2, Paintbrush, Rocket } from "lucide-react";
+import { Code2, PenTool, Cpu } from "lucide-react";
 
-const icons = [Code2, Paintbrush, Rocket];
+const icons = [Code2, PenTool, Cpu];
 
 export function WhyUs() {
     const { t } = useTranslation();

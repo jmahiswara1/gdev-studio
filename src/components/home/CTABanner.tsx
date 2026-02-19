@@ -3,6 +3,7 @@
 import { useTranslation } from "@/lib/i18n/useTranslation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function CTABanner() {
     const { t } = useTranslation();
@@ -18,18 +19,19 @@ export function CTABanner() {
                         {t.cta.subtitle}
                     </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
-                        <Link
+                        <Button
                             href="/contact"
-                            className="rounded-xl bg-background px-8 py-3.5 text-sm font-semibold text-foreground shadow-sm hover:bg-background/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform hover:scale-105"
+                            className="rounded-xl bg-background px-8 py-6 text-sm font-semibold text-foreground shadow-sm hover:bg-background/90 focus-visible:outline-white transition-transform hover:scale-105"
                         >
                             {t.cta.primary}
-                        </Link>
-                        <Link
+                        </Button>
+                        <Button
                             href="/projects"
-                            className="text-sm font-semibold leading-6 text-background flex items-center gap-1 hover:gap-2 transition-all"
+                            variant="secondary"
+                            className="text-sm font-semibold rounded-xl px-6 py-6 bg-white/10 text-white hover:bg-white/20 hover:text-white border border-white/20 backdrop-blur-sm transition-all hover:scale-105"
                         >
-                            {t.cta.secondary} <ArrowRight size={16} />
-                        </Link>
+                            {t.cta.secondary} <ArrowRight size={16} className="ml-2" />
+                        </Button>
                     </div>
 
                     {/* Decorative gradients */}

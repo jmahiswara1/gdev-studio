@@ -92,7 +92,7 @@ lib/
 ---
 
 ## 4. DATA: `lib/data/projects.ts`
-
+  
 ```typescript
 export interface Project {
   slug: string;

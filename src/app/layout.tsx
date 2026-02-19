@@ -65,7 +65,7 @@ export default function RootLayout({
           <LanguageProvider>
             <LenisProvider>
               <Navbar />
-              <main>{children}</main>
+              <main className="pt-10">{children}</main>
               <Footer />
               <FloatingFAB />
             </LenisProvider>

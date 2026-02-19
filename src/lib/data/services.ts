@@ -8,6 +8,7 @@ export interface Service {
     priceStart: string;
     duration: string;
     waMessage: string;
+    techStack: string[];
 }
 
 export const services: Service[] = [
@@ -28,6 +29,7 @@ export const services: Service[] = [
         priceStart: "Rp 500.000",
         duration: "3-5 hari",
         waMessage: "Halo Gadang, saya tertarik dengan layanan pembuatan Landing Page.",
+        techStack: ["Next.js", "Tailwind CSS", "GSAP", "Framer Motion"],
     },
     {
         slug: "company-profile",
@@ -46,6 +48,7 @@ export const services: Service[] = [
         priceStart: "Rp 800.000",
         duration: "5-7 hari",
         waMessage: "Halo Gadang, saya tertarik dengan layanan pembuatan Company Profile.",
+        techStack: ["Next.js", "React", "Tailwind CSS", "CMS"],
     },
     {
         slug: "dashboard",
@@ -64,6 +67,7 @@ export const services: Service[] = [
         priceStart: "Rp 1.500.000",
         duration: "10-14 hari",
         waMessage: "Halo Gadang, saya tertarik dengan layanan pembuatan Dashboard/Admin Panel.",
+        techStack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Recharts"],
     },
     {
         slug: "portfolio",
@@ -82,6 +86,7 @@ export const services: Service[] = [
         priceStart: "Rp 600.000",
         duration: "4-6 hari",
         waMessage: "Halo Gadang, saya tertarik dengan layanan pembuatan Portfolio Website.",
+        techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
     },
     {
         slug: "ai-integration",
@@ -100,6 +105,7 @@ export const services: Service[] = [
         priceStart: "Rp 1.000.000",
         duration: "7-10 hari",
         waMessage: "Halo Gadang, saya tertarik dengan layanan AI Integration.",
+        techStack: ["OpenAI API", "LangChain", "Python", "Next.js"],
     },
     {
         slug: "api-development",
@@ -118,5 +124,6 @@ export const services: Service[] = [
         priceStart: "Rp 1.200.000",
         duration: "7-12 hari",
         waMessage: "Halo Gadang, saya tertarik dengan layanan API Development.",
+        techStack: ["Node.js", "Express", "Swagger", "Jest", "Docker"],
     },
 ];

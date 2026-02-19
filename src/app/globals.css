@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -71,20 +71,47 @@
   --animate-float: float 6s ease-in-out infinite;
 
   @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
+
   @keyframes marquee-reverse {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0%); }
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
   }
+
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(10, 10, 10, 0.1); }
-    50% { box-shadow: 0 0 40px rgba(10, 10, 10, 0.25); }
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(10, 10, 10, 0.1);
+    }
+
+    50% {
+      box-shadow: 0 0 40px rgba(10, 10, 10, 0.25);
+    }
   }
+
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
 
@@ -131,9 +158,9 @@
   --tag-border: #d8d8d8;
   --tag-text: #3d3d3d;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-  --shadow-card: 0 2px 8px rgba(0,0,0,0.05), 0 0 0 1px #e2e2e2;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05), 0 0 0 1px #e2e2e2;
 
   --chart-1: #0a0a0a;
   --chart-2: #3d3d3d;
@@ -191,9 +218,9 @@
   --tag-border: #2a2a2a;
   --tag-text: #b0b0b0;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-  --shadow-card: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 1px #2a2a2a;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 1px #2a2a2a;
 
   --chart-1: #ffffff;
   --chart-2: #b0b0b0;
@@ -215,27 +242,36 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
-  h1, h2, h3 {
+
+  h1,
+  h2,
+  h3 {
     font-family: 'Playfair Display', serif;
   }
 }
 
 /* Lenis smooth scroll */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
+
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
@@ -247,6 +283,7 @@ html.lenis, html.lenis body {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .dark .glass {
   background: rgba(10, 10, 10, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -269,23 +306,55 @@ html.lenis, html.lenis body {
   position: relative;
   overflow: hidden;
 }
+
 .magnetic-glow::before {
   content: '';
   position: absolute;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(10,10,10,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(10, 10, 10, 0.06) 0%, transparent 70%);
   transform: translate(var(--mx, -100px), var(--my, -100px));
   pointer-events: none;
   z-index: 0;
 }
+
 .dark .magnetic-glow::before {
-  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
 }
 
 /* Selection */
 ::selection {
   background: var(--primary);
   color: var(--primary-foreground);
+}
+
+/* View Transitions */
+/* View Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 9999;
+}
+
+/* Linear fade mask for marquees */
+.mask-linear-fade {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }

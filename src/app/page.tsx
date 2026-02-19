@@ -1,3 +1,4 @@
+import { SectionReveal } from "@/components/ui/section-reveal"; // Corrected import path
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
 import { WhyUs } from "@/components/home/WhyUs";
@@ -12,16 +13,45 @@ import { CTABanner } from "@/components/home/CTABanner";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Services />
-      <WhyUs />
-      <HowItWorks />
-      <TechStack />
-      <ProjectsBento />
-      <Pricing />
-      <Testimonials />
-      <FAQ />
-      <CTABanner />
+      <SectionReveal direction="none">
+        <Hero />
+      </SectionReveal>
+
+      <SectionReveal>
+        <Services />
+      </SectionReveal>
+
+      <SectionReveal>
+        <WhyUs />
+      </SectionReveal>
+
+      <SectionReveal direction="right">
+        <HowItWorks />
+      </SectionReveal>
+
+      <SectionReveal direction="left">
+        <TechStack />
+      </SectionReveal>
+
+      <SectionReveal>
+        <ProjectsBento />
+      </SectionReveal>
+
+      <SectionReveal>
+        <Pricing />
+      </SectionReveal>
+
+      <SectionReveal>
+        <Testimonials />
+      </SectionReveal>
+
+      <SectionReveal>
+        <FAQ />
+      </SectionReveal>
+
+      <SectionReveal direction="up" delay={0.2}>
+        <CTABanner />
+      </SectionReveal>
     </>
   );
 }

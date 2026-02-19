@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, Terminal } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -61,19 +62,22 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-                        <Link
+                        <Button
                             href="/projects"
-                            className="group inline-flex items-center gap-2 rounded-xl bg-foreground px-8 py-4 text-base font-medium text-background transition-all hover:bg-foreground/90 hover:shadow-lg hover:shadow-primary/20"
+                            size="lg"
+                            className="group rounded-xl px-8 py-6 text-base font-medium transition-all hover:shadow-lg hover:shadow-primary/20"
                         >
                             {t.hero.cta_primary}
-                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                        <Link
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Button>
+                        <Button
                             href="/contact"
-                            className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-8 py-4 text-base font-medium text-foreground transition-colors hover:bg-accent"
+                            variant="outline"
+                            size="lg"
+                            className="rounded-xl px-8 py-6 text-base font-medium"
                         >
                             {t.hero.cta_secondary}
-                        </Link>
+                        </Button>
                     </div>
 
                     {/* Stats */}

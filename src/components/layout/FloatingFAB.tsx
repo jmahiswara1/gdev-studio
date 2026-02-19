@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { Button } from "@/components/ui/button";
 
 // WhatsApp icon as inline SVG component
 function WhatsAppIcon({ size = 20 }: { size?: number }) {
@@ -209,9 +210,14 @@ export function FloatingFAB() {
                                     </span>
                                 )}
                             </span>
-                            <button onClick={() => setChatOpen(false)} className="rounded-lg p-1 hover:bg-background/10">
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setChatOpen(false)}
+                                className="h-8 w-8 hover:bg-background/10 text-background hover:text-background"
+                            >
                                 <X size={16} />
-                            </button>
+                            </Button>
                         </div>
 
                         {/* Messages */}
@@ -229,8 +235,8 @@ export function FloatingFAB() {
                                 >
                                     <span
                                         className={`inline-block max-w-[85%] rounded-2xl px-4 py-2 text-sm ${msg.role === "user"
-                                                ? "bg-foreground text-background"
-                                                : "bg-accent text-accent-foreground"
+                                            ? "bg-foreground text-background"
+                                            : "bg-accent text-accent-foreground"
                                             }`}
                                     >
                                         {msg.content || (isLoading && i === messages.length - 1 ? "..." : "")}
@@ -251,13 +257,14 @@ export function FloatingFAB() {
                                     placeholder={t.chat.placeholder}
                                     className="flex-1 rounded-xl border border-border bg-background px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
                                 />
-                                <button
+                                <Button
+                                    size="icon"
                                     onClick={handleSend}
                                     disabled={isLoading || !input.trim()}
-                                    className="rounded-xl bg-foreground p-2 text-background transition-opacity hover:opacity-80 disabled:opacity-40"
+                                    className="rounded-xl shrink-0"
                                 >
                                     <Send size={16} />
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </motion.div>
@@ -270,49 +277,60 @@ export function FloatingFAB() {
                     {isExpanded && (
                         <>
                             {/* WhatsApp button */}
-                            <motion.a
-                                href={waUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            {/* WhatsApp button */}
+                            <motion.div
                                 initial={{ opacity: 0, scale: 0, y: 10 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0, y: 10 }}
                                 transition={{ type: "spring", stiffness: 400, damping: 20, delay: 0 }}
-                                className="flex items-center gap-2 rounded-full bg-green-600 px-4 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-105"
                             >
-                                <WhatsAppIcon size={18} />
-                                <span className="hidden sm:inline">{t.fab.wa_label}</span>
-                            </motion.a>
+                                <Button
+                                    href={waUrl}
+                                    external
+                                    className="flex items-center gap-2 rounded-full py-6 text-white"
+                                >
+                                    <WhatsAppIcon size={18} />
+                                    <span className="hidden sm:inline">{t.fab.wa_label}</span>
+                                </Button>
+                            </motion.div>
 
                             {/* AI Chat button */}
-                            <motion.button
-                                onClick={() => setChatOpen(!chatOpen)}
+                            {/* AI Chat button */}
+                            <motion.div
                                 initial={{ opacity: 0, scale: 0, y: 10 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0, y: 10 }}
                                 transition={{ type: "spring", stiffness: 400, damping: 20, delay: 0.08 }}
-                                className="flex items-center gap-2 rounded-full bg-foreground px-4 py-3 text-sm font-medium text-background shadow-lg transition-transform hover:scale-105"
                             >
-                                <MessageCircle size={18} />
-                                <span className="hidden sm:inline">{t.fab.ai_label}</span>
-                            </motion.button>
+                                <Button
+                                    onClick={() => setChatOpen(!chatOpen)}
+                                    className="flex items-center gap-2 rounded-full px-4 py-6 shadow-lg"
+                                >
+                                    <MessageCircle size={18} />
+                                    <span className="hidden sm:inline">{t.fab.ai_label}</span>
+                                </Button>
+                            </motion.div>
                         </>
                     )}
                 </AnimatePresence>
 
                 {/* Main toggle */}
-                <motion.button
-                    onClick={() => setIsExpanded(!isExpanded)}
+                {/* Main toggle */}
+                <motion.div
                     whileTap={{ scale: 0.95 }}
-                    className="flex h-14 w-14 items-center justify-center rounded-full bg-foreground text-background shadow-lg transition-transform"
                 >
-                    <motion.div
-                        animate={{ rotate: isExpanded ? 45 : 0 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    <Button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        className="flex h-14 w-14 items-center justify-center rounded-full shadow-lg p-0"
                     >
-                        <MessageCircle size={24} />
-                    </motion.div>
-                </motion.button>
+                        <motion.div
+                            animate={{ rotate: isExpanded ? 45 : 0 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        >
+                            <MessageCircle size={24} />
+                        </motion.div>
+                    </Button>
+                </motion.div>
             </div>
         </>
     );

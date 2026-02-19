@@ -1,13 +1,15 @@
+export type ProjectCategory =
+  | "Landing Page"
+  | "Dashboard"
+  | "Company Profile"
+  | "Portfolio"
+  | "Academic"
+  | "AI";
+
 export interface Project {
   slug: string;
   title: string;
-  category:
-    | "Landing Page"
-    | "Dashboard"
-    | "Company Profile"
-    | "Portfolio"
-    | "Academic"
-    | "AI";
+  category: ProjectCategory;
   shortDesc: string;
   longDesc: string;
   challenge: string;

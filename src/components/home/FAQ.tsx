@@ -4,6 +4,7 @@ import { useTranslation } from "@/lib/i18n/useTranslation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function FAQ() {
     const { t } = useTranslation();
@@ -27,16 +28,17 @@ export function FAQ() {
                             key={index}
                             className="overflow-hidden rounded-2xl border border-border bg-card transition-all hover:bg-accent/50"
                         >
-                            <button
+                            <Button
+                                variant="ghost"
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="flex w-full items-center justify-between px-6 py-4 text-left font-medium"
+                                className="flex w-full items-center justify-between px-6 py-4 text-left font-medium h-auto hover:bg-transparent"
                             >
                                 <span className="text-lg">{item.q}</span>
                                 <ChevronDown
                                     className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
                                         }`}
                                 />
-                            </button>
+                            </Button>
                             <AnimatePresence>
                                 {openIndex === index && (
                                     <motion.div
